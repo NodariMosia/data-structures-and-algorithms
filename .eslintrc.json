@@ -1,0 +1,129 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["plugin:prettier/recommended", "prettier", "eslint:recommended"],
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "filter": "x-api-key",
+        "format": null,
+        "selector": "property"
+      },
+      {
+        "filter": "x-session-id",
+        "format": null,
+        "selector": "property"
+      },
+      {
+        "filter": "x-locale",
+        "format": null,
+        "selector": "property"
+      },
+      {
+        "custom": {
+          "match": false,
+          "regex": "^(err)$"
+        },
+        "filter": {
+          "match": false,
+          "regex": "(Model|Enum)$"
+        },
+        "format": ["camelCase", "PascalCase", "UPPER_CASE"],
+        "leadingUnderscore": "allow",
+        "selector": "variable"
+      },
+      {
+        "format": ["camelCase"],
+        "leadingUnderscore": "forbid",
+        "selector": "function"
+      },
+      {
+        "format": ["PascalCase"],
+        "leadingUnderscore": "allow",
+        "prefix": ["is", "was", "should", "has", "can", "success"],
+        "selector": "parameter",
+        "types": ["boolean"]
+      },
+      {
+        "format": ["UPPER_CASE"],
+        "leadingUnderscore": "forbid",
+        "selector": "enumMember"
+      },
+      {
+        "custom": {
+          "match": false,
+          "regex": "Enum$"
+        },
+        "format": ["PascalCase"],
+        "leadingUnderscore": "forbid",
+        "selector": "enum"
+      },
+      {
+        "format": ["PascalCase"],
+        "leadingUnderscore": "forbid",
+        "selector": "interface"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-use-before-define": "error",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 100,
+        "comments": 120,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "tabWidth": 2
+      }
+    ],
+    "multiline-ternary": "off",
+    "no-await-in-loop": "error",
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "no-constructor-return": "error",
+    "no-duplicate-imports": "error",
+    "no-multi-spaces": "error",
+    "no-multiple-empty-lines": "error",
+    "no-plusplus": "off",
+    "no-unmodified-loop-condition": "error",
+    "no-unreachable-loop": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true
+      }
+    ],
+    "semi": "error"
+  }
+}
