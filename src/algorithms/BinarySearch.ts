@@ -4,7 +4,7 @@
  * @param target The value to search for.
  * @param startIndex The index of the current first element in the original array.
  * @returns The index of the target value in the array, or -1 if it is not found.
- * @timeComplexity `O(log n)`.
+ * @timeComplexity `O(log(n))`.
  */
 function recursiveBinarySearch(array: number[], target: number, startIndex: number): number {
   if (array.length === 0) {
@@ -35,7 +35,7 @@ function recursiveBinarySearch(array: number[], target: number, startIndex: numb
  * @param sortedArray The sorted array to search.
  * @param target The target element to find.
  * @returns The index of the target element in the sorted array, or -1 if it is not found.
- * @timeComplexity `O(log n)`.
+ * @timeComplexity `O(log(n))`.
  */
 export default function binarySearch(sortedArray: number[], target: number): number {
   return recursiveBinarySearch(sortedArray, target, 0);
