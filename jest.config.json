@@ -1,6 +1,11 @@
 {
   "roots": ["<rootDir>/src"],
   "testMatch": ["**/__tests__/**/*.+(ts|tsx|js)", "**/?(*.)+(spec|test).+(ts|tsx|js)"],
+  "moduleNameMapper": {
+    "@dataStructures/(.*)": ["<rootDir>/src/dataStructures/$1"],
+    "@algorithms/(.*)": ["<rootDir>/src/algorithms/$1"],
+    "@utils/(.*)": ["<rootDir>/src/utils/$1"]
+  },
   "transform": {
     "^.+\\.(ts|tsx)$": "ts-jest"
   },

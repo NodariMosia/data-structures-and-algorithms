@@ -1,4 +1,4 @@
-import { List } from 'interfaces/List.interface';
+import { List } from './interfaces/List.interface';
 
 /**
  * Represents a node in a linked list.
@@ -11,7 +11,8 @@ interface Node<T> {
 }
 
 /**
- * A doubly linked list implementation of the List interface.
+ * A doubly linked list implementation, which is a linear collection of data elements,
+ * whose order is not given by their physical placement in memory.
  * @template T The type of elements held in this list.
  */
 export default class LinkedList<T> implements List<T> {
@@ -26,7 +27,7 @@ export default class LinkedList<T> implements List<T> {
   private tail: Node<T> | null = null;
 
   /**
-   * The number of nodes in the linked list.
+   * The number of elements in the list.
    */
   private _length: number;
 
@@ -94,15 +95,15 @@ export default class LinkedList<T> implements List<T> {
       : this.walkFromTail(this.length - index - 1);
   }
 
-  insertFirst(item: T): List<T> {
-    return this.insertAt(item, 0)!;
+  insertFirst(item: T): LinkedList<T> {
+    return this.insertAt(item, 0) ?? this;
   }
 
-  insertLast(item: T): List<T> {
-    return this.insertAt(item, this.length)!;
+  insertLast(item: T): LinkedList<T> {
+    return this.insertAt(item, this.length) ?? this;
   }
 
-  insertAt(item: T, index: number): List<T> | undefined {
+  insertAt(item: T, index: number): LinkedList<T> | undefined {
     if (index < 0 || index > this.length) {
       return undefined;
     }
