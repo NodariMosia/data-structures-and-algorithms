@@ -249,28 +249,19 @@ export default class LinkedList<T> implements List<T> {
   }
 
   toArray(): T[] {
-    const arr: T[] = [];
+    const array: T[] = [];
 
     let curr = this.head;
 
     while (curr) {
-      arr.push(curr.value);
+      array.push(curr.value);
       curr = curr.next;
     }
 
-    return arr;
+    return array;
   }
 
   toString(): string {
-    const buffer: string[] = [];
-
-    let curr = this.head;
-
-    while (curr) {
-      buffer.push(`${curr.value}`);
-      curr = curr.next;
-    }
-
-    return `LinkedList: [${buffer.join(' <-> ')}]`;
+    return `LinkedList: [${this.toArray().join(' <-> ')}]`;
   }
 }
