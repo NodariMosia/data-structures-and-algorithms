@@ -1,9 +1,6 @@
-export interface List<T> {
-  /**
-   * @description The number of elements in the list.
-   */
-  readonly length: number;
+import { Enumerable } from './Enumerable.interface';
 
+export interface List<T> extends Enumerable<T> {
   /**
    * @description Inserts new element at the start of the list.
    * @param item Element to insert.
@@ -82,19 +79,4 @@ export interface List<T> {
    * @returns `true` if the list contains the specified element, false otherwise.
    */
   contains: (item: T) => boolean;
-
-  /**
-   * @description Removes all elements from the list.
-   */
-  clear: () => void;
-
-  /**
-   * @returns The list as an array.
-   */
-  toArray: () => T[];
-
-  /**
-   * @returns The list as a string.
-   */
-  toString: () => string;
 }
