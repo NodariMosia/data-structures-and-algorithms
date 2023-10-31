@@ -1,4 +1,7 @@
 {
+  "jest.autoRun": {
+    "watch": false
+  },
   "editor.rulers": [100],
   "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
