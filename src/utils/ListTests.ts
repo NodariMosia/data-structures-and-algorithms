@@ -54,6 +54,12 @@ export function testListImplementation<ListImpl extends List<number>>({
     expect(list.removeFirst()).toBe(10);
     expect(list.length).toBe(2);
     expect(list.toArray()).toEqual([20, 30]);
+
+    expect(list.removeFirst()).toBe(20);
+    expect(list.removeFirst()).toBe(30);
+    expect(list.removeFirst()).toBeUndefined();
+    expect(list.length).toBe(0);
+    expect(list.toArray()).toEqual([]);
   });
 
   test('removeLast should remove and return the last item from the list', () => {
@@ -62,6 +68,12 @@ export function testListImplementation<ListImpl extends List<number>>({
     expect(list.removeLast()).toBe(30);
     expect(list.length).toBe(2);
     expect(list.toArray()).toEqual([10, 20]);
+
+    expect(list.removeLast()).toBe(20);
+    expect(list.removeLast()).toBe(10);
+    expect(list.removeLast()).toBeUndefined();
+    expect(list.length).toBe(0);
+    expect(list.toArray()).toEqual([]);
   });
 
   test('removeAt should remove and return the item at the specified index', () => {
@@ -70,6 +82,13 @@ export function testListImplementation<ListImpl extends List<number>>({
     expect(list.removeAt(1)).toBe(20);
     expect(list.length).toBe(2);
     expect(list.toArray()).toEqual([10, 30]);
+
+    expect(list.removeAt(1)).toBe(30);
+    expect(list.removeAt(1)).toBeUndefined();
+    expect(list.removeAt(0)).toBe(10);
+    expect(list.removeAt(0)).toBeUndefined();
+    expect(list.length).toBe(0);
+    expect(list.toArray()).toEqual([]);
   });
 
   test('remove should remove the first occurrence of the specified item', () => {
