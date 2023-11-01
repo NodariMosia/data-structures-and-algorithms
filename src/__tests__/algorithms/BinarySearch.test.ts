@@ -1,6 +1,6 @@
 import binarySearch from '@algorithms/BinarySearch';
 
-describe('binarySearch', () => {
+describe('BinarySearch', () => {
   it('should search for elements in array', () => {
     expect(binarySearch([], 1)).toBe(-1);
     expect(binarySearch([1], 1)).toBe(0);

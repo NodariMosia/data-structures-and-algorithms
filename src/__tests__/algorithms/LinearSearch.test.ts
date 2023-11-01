@@ -1,6 +1,6 @@
 import linearSearch from '@algorithms/LinearSearch';
 
-describe('linearSearch', () => {
+describe('LinearSearch', () => {
   it('should search for elements in array', () => {
     expect(linearSearch([], 1)).toBe(-1);
     expect(linearSearch([1], 1)).toBe(0);

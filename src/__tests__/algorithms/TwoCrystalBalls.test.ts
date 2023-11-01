@@ -1,6 +1,6 @@
 import twoCrystalBalls from '@algorithms/TwoCrystalBalls';
 
-describe('twoCrystalBalls', () => {
+describe('TwoCrystalBalls', () => {
   it('should find the breakpoint', () => {
     const randomIndex = Math.floor(Math.random() * 10000);
     const steps = new Array(10000).fill(false);
