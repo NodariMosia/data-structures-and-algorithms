@@ -48,7 +48,7 @@ function recursiveQuickSort(array: number[], start: number, end: number): void {
  * Mutates the original array in place and returns it.
  * @param array The array of numbers to be sorted.
  * @returns The sorted array of numbers.
- * @timeComplexity best case: `O(n log(n))`, worst case: `O(n^2)`.
+ * @timeComplexity best & average case: `O(n log(n))`, worst case: `O(n^2)`.
  */
 export default function quickSort(array: number[]): number[] {
   recursiveQuickSort(array, 0, array.length - 1);

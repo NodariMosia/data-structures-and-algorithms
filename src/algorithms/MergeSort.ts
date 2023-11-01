@@ -33,6 +33,7 @@ function merge(left: number[], right: number[]): number[] {
  * Sorts an array of numbers using the merge sort algorithm.
  * @param array - The array of numbers to be sorted.
  * @returns The sorted array of numbers.
+ * @timeComplexity `O(log(n))`.
  */
 export default function mergeSort(array: number[]): number[] {
   if (array.length <= 1) {

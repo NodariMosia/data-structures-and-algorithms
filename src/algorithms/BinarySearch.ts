@@ -4,7 +4,6 @@
  * @param target The value to search for.
  * @param startIndex The index of the current first element in the original array.
  * @returns The index of the target value in the array, or -1 if it is not found.
- * @timeComplexity `O(log(n))`.
  */
 function recursiveBinarySearch(array: number[], target: number, startIndex: number): number {
   if (array.length === 0) {
