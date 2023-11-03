@@ -1,11 +1,3 @@
-/**
- * Represents a point in 2D space with an x and y coordinate.
- */
-export interface Point {
-  x: number;
-  y: number;
-}
-
 const DIRECTIONS = [
   { x: 0, y: -1 }, // UP
   { x: 1, y: 0 }, // RIGHT
@@ -26,9 +18,9 @@ const DIRECTIONS = [
 function walk(
   maze: string[],
   wall: string,
-  curr: Point,
-  end: Point,
-  path: Point[],
+  curr: Point2D,
+  end: Point2D,
+  path: Point2D[],
   seen: boolean[][]
 ): boolean {
   const height = maze.length;
@@ -77,10 +69,10 @@ function walk(
 export default function mazeSolver(
   maze: string[],
   wall: string,
-  start: Point,
-  end: Point
-): Point[] {
-  const path: Point[] = [];
+  start: Point2D,
+  end: Point2D
+): Point2D[] {
+  const path: Point2D[] = [];
   const seen: boolean[][] = [];
 
   for (let i = 0; i < maze.length; i++) {

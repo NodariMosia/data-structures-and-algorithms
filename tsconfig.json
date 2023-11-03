@@ -8,7 +8,8 @@
     "paths": {
       "@dataStructures/*": ["dataStructures/*"],
       "@algorithms/*": ["algorithms/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "*": ["global.d.ts"]
     },
     "outDir": "dist",
     "sourceMap": true,

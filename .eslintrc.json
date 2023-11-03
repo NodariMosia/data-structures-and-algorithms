@@ -114,6 +114,7 @@
     "no-multi-spaces": "error",
     "no-multiple-empty-lines": "error",
     "no-plusplus": "off",
+    "no-undef": "off",
     "no-unmodified-loop-condition": "error",
     "no-unreachable-loop": "error",
     "no-var": "error",

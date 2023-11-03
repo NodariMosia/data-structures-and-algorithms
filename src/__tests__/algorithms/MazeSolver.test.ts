@@ -1,6 +1,6 @@
-import mazeSolver, { Point } from '@algorithms/MazeSolver';
+import mazeSolver from '@algorithms/MazeSolver';
 
-function drawPath(rows: string[], path: Point[]) {
+function drawPath(rows: string[], path: Point2D[]) {
   const cells = rows.map((row) => row.split(''));
 
   path.forEach(({ x, y }) => {
@@ -23,10 +23,10 @@ describe('MazeSolver', () => {
       'x xxxxxxxxxx',
     ];
 
-    const start: Point = { x: 10, y: 0 };
-    const end: Point = { x: 1, y: 5 };
+    const start: Point2D = { x: 10, y: 0 };
+    const end: Point2D = { x: 1, y: 5 };
 
-    const correctPath: Point[] = [
+    const correctPath: Point2D[] = [
       { x: 10, y: 0 },
       { x: 10, y: 1 },
       { x: 10, y: 2 },
@@ -74,10 +74,10 @@ describe('MazeSolver', () => {
       'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     ];
 
-    const start: Point = { x: 23, y: 5 };
-    const end: Point = { x: 27, y: 19 };
+    const start: Point2D = { x: 23, y: 5 };
+    const end: Point2D = { x: 27, y: 19 };
 
-    const correctPath: Point[] = [
+    const correctPath: Point2D[] = [
       { x: 23, y: 5 },
       { x: 22, y: 5 },
       { x: 21, y: 5 },
@@ -152,10 +152,10 @@ describe('MazeSolver', () => {
       'x xxxxxxxxxx',
     ];
 
-    const start: Point = { x: 10, y: 0 };
-    const end: Point = { x: 10, y: 0 };
+    const start: Point2D = { x: 10, y: 0 };
+    const end: Point2D = { x: 10, y: 0 };
 
-    const correctPath: Point[] = [{ x: 10, y: 0 }];
+    const correctPath: Point2D[] = [{ x: 10, y: 0 }];
 
     const path = mazeSolver(maze, 'x', start, end);
 
@@ -172,8 +172,8 @@ describe('MazeSolver', () => {
       'x xxxxxxxxxx',
     ];
 
-    const start: Point = { x: 10, y: 0 };
-    const end: Point = { x: 2, y: 2 };
+    const start: Point2D = { x: 10, y: 0 };
+    const end: Point2D = { x: 2, y: 2 };
 
     const path = mazeSolver(maze, 'x', start, end);
 
@@ -183,8 +183,8 @@ describe('MazeSolver', () => {
   it('should return an empty array if the maze is empty', () => {
     const maze: string[] = [];
 
-    const start: Point = { x: 0, y: 0 };
-    const end: Point = { x: 0, y: 0 };
+    const start: Point2D = { x: 0, y: 0 };
+    const end: Point2D = { x: 0, y: 0 };
 
     const path = mazeSolver(maze, 'x', start, end);
 
