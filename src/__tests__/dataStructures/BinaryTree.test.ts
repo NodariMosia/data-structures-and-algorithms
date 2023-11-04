@@ -2,13 +2,13 @@ import BinaryTree from '@dataStructures/BinaryTree';
 import {
   binaryTreeRoot1,
   binaryTreeRoot2,
-  completeBinaryTreeRoot,
+  completeOrderedBinaryTreeRoot,
 } from '@utils/BinaryTreeExamples';
 
 describe('BinaryTree', () => {
   const binaryTree1 = new BinaryTree(binaryTreeRoot1);
   const binaryTree2 = new BinaryTree(binaryTreeRoot2);
-  const completeBinaryTree = new BinaryTree<number>(completeBinaryTreeRoot);
+  const completeBinaryTree = new BinaryTree<number>(completeOrderedBinaryTreeRoot);
 
   test('count should return the number of nodes in the tree', () => {
     expect(binaryTree1.count).toBe(10);

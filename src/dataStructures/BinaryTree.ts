@@ -3,9 +3,6 @@ import { BinaryTree as IBinaryTree } from './interfaces/BinaryTree.interface';
 
 /**
  * A binary tree data structure is a tree where each node has at most two children (left and right).
- * The root node represents the topmost node in the tree.
- * The left and right properties point to the left and right children of the node.
- * A node without children is called a leaf.
  * @see https://en.wikipedia.org/wiki/Binary_tree
  *
  * @template T The type of values stored in the tree.
@@ -14,7 +11,7 @@ export default class BinaryTree<T> implements IBinaryTree<T> {
   /**
    * The root (topmost) node of the binary tree.
    */
-  private _root: BinaryTreeNode<T> | null;
+  protected _root: BinaryTreeNode<T> | null;
 
   public get root(): BinaryTreeNode<T> | null {
     return this._root;
@@ -117,7 +114,7 @@ export default class BinaryTree<T> implements IBinaryTree<T> {
    * @param target The value to search for in the binary tree.
    * @returns True if the value is found, false otherwise.
    */
-  private dfs(node: BinaryTreeNode<T> | null, target: T): boolean {
+  protected dfs(node: BinaryTreeNode<T> | null, target: T): boolean {
     if (node === null) {
       return false;
     }

@@ -122,30 +122,30 @@ export const binaryTreeRoot2: BinaryTreeNode<number> = {
  *    5  15  30   100
  * ```
  */
-export const completeBinaryTreeRoot: BinaryTreeNode<number> = {
+export const completeOrderedBinaryTreeRoot: BinaryTreeNode<number> = {
   value: 20,
-  right: {
-    value: 50,
-    right: {
-      value: 100,
-      right: null,
-      left: null,
-    },
-    left: {
-      value: 30,
-      right: null,
-      left: null,
-    },
-  },
   left: {
     value: 10,
+    left: {
+      value: 5,
+      right: null,
+      left: null,
+    },
     right: {
       value: 15,
       right: null,
       left: null,
     },
+  },
+  right: {
+    value: 50,
     left: {
-      value: 5,
+      value: 30,
+      right: null,
+      left: null,
+    },
+    right: {
+      value: 100,
       right: null,
       left: null,
     },
