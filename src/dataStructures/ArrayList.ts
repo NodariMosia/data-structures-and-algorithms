@@ -51,7 +51,7 @@ export default class ArrayList<T> implements List<T> {
    */
   private _length: number;
 
-  public get length(): number {
+  get length(): number {
     return this._length;
   }
 

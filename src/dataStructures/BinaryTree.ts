@@ -13,7 +13,7 @@ export default class BinaryTree<T> implements IBinaryTree<T> {
    */
   protected _root: BinaryTreeNode<T> | null;
 
-  public get root(): BinaryTreeNode<T> | null {
+  get root(): BinaryTreeNode<T> | null {
     return this._root;
   }
 

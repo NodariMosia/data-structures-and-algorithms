@@ -34,7 +34,7 @@ export default class Queue<T> implements IQueue<T> {
    */
   private _length: number;
 
-  public get length(): number {
+  get length(): number {
     return this._length;
   }
 
