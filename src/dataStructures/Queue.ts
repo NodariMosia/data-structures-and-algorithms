@@ -57,16 +57,18 @@ export default class Queue<T> implements IQueue<T> {
   }
 
   dequeue(): T | undefined {
-    if (!this.head) {
+    if (this.length === 0 || !this.head) {
       return undefined;
     }
 
     this._length--;
 
     const removedHead = this.head;
-    this.head = this.head.next;
+    this.head = removedHead.next;
 
-    removedHead.next = null;
+    if (this._length === 0) {
+      this.head = this.tail = null;
+    }
 
     return removedHead.value;
   }
