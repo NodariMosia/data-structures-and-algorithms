@@ -31,6 +31,8 @@ function merge(left: number[], right: number[]): number[] {
 
 /**
  * Sorts an array of numbers using the merge sort algorithm.
+ * @see https://en.wikipedia.org/wiki/Merge_sort
+ *
  * @param array - The array of numbers to be sorted.
  * @returns The sorted array of numbers.
  * @timeComplexity `O(log(n))`.

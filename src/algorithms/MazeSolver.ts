@@ -59,6 +59,9 @@ function walk(
 
 /**
  * Solves a maze represented as an array of strings, finding a path from the start point to the end point.
+ * Uses a recursive (in effect a depth-first search) algorithm.
+ * @see https://en.wikipedia.org/wiki/Maze_solving_algorithm
+ *
  * @param maze The maze represented as an array of strings.
  * @param wall The character used to represent walls in the maze.
  * @param start The starting point in the maze.

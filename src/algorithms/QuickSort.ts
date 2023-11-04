@@ -46,6 +46,8 @@ function recursiveQuickSort(array: number[], start: number, end: number): void {
 /**
  * Sorts an array of numbers in ascending order using the quick sort algorithm.
  * Mutates the original array in place and returns it.
+ * @see https://en.wikipedia.org/wiki/Quicksort
+ *
  * @param array The array of numbers to be sorted.
  * @returns The sorted array of numbers.
  * @timeComplexity best & average case: `O(n log(n))`, worst case: `O(n^2)`.

@@ -9,6 +9,15 @@ interface Node<T> {
   prev: Node<T> | null;
 }
 
+/**
+ * A stack is a data structure that follows the Last-In-First-Out (LIFO) principle.
+ * This means that the last element inserted into the stack is the first one to be removed.
+ * A stack supports adding (push) and removing (pop) elements from the top of the stack.
+ * This implementation uses a singly linked list to store the elements.
+ * @see https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+ *
+ * @template T The type of elements held in this stack.
+ */
 export default class Stack<T> implements IStack<T> {
   /**
    * The "top" node in the stack, or null if the stack is empty.
@@ -28,7 +37,7 @@ export default class Stack<T> implements IStack<T> {
    * Creates a new Stack instance.
    * @constructor
    * @template T The type of elements held in this stack.
-   * @param {...T[]} items - The initial items to insert into the stack.
+   * @param items The initial items to insert into the stack.
    */
   constructor(...items: T[]) {
     this._length = 0;

@@ -1,6 +1,8 @@
 /**
  * Sorts an array of numbers using the insertion sort algorithm.
  * Mutates the original array in place and returns it.
+ * @see https://en.wikipedia.org/wiki/Insertion_sort
+ *
  * @param array The array of numbers to be sorted.
  * @returns The sorted array of numbers.
  * @timeComplexity `O(n^2)`.

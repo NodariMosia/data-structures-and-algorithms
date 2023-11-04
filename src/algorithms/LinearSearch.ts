@@ -1,5 +1,7 @@
 /**
  * Searches for a target element in an array using linear search algorithm.
+ * @see https://en.wikipedia.org/wiki/Linear_search
+ *
  * @param array The array to search in.
  * @param target The target element to search for.
  * @returns The index of the target element if found, otherwise -1.

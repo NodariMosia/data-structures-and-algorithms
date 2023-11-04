@@ -13,6 +13,9 @@ interface Node<T> {
 /**
  * A doubly linked list implementation, which is a linear collection of data elements,
  * whose order is not given by their physical placement in memory.
+ * Instead, each element points to the next and previous.
+ * @see https://en.wikipedia.org/wiki/Linked_list
+ *
  * @template T The type of elements held in this list.
  */
 export default class LinkedList<T> implements List<T> {
@@ -39,7 +42,7 @@ export default class LinkedList<T> implements List<T> {
    * Creates a new LinkedList instance.
    * @constructor
    * @template T The type of elements held in this list.
-   * @param {...T[]} items - The initial items to insert into the LinkedList.
+   * @param items The initial items to insert into the LinkedList.
    */
   constructor(...items: T[]) {
     this._length = 0;

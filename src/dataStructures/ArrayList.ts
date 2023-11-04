@@ -1,7 +1,13 @@
 import { List } from './interfaces/List.interface';
 
 /**
- * A dynamic array implementation.
+ * A dynamic array implementation. A dynamic array is a data structure that can grow and shrink as needed.
+ * This implementation uses a static array to store the elements of the list.
+ * When the length of the list exceeds a certain threshold, the internal array grows.
+ * When the length of the list is less than a certain threshold, the internal array shrinks.
+ * Growing and shrinking doesn't modify the inner array, but rather creates a new array and copies the elements to it.
+ * @see https://en.wikipedia.org/wiki/Dynamic_array
+ *
  * @template T The type of elements held in this list.
  */
 export default class ArrayList<T> implements List<T> {
@@ -53,7 +59,7 @@ export default class ArrayList<T> implements List<T> {
    * Creates a new ArrayList instance.
    * @constructor
    * @template T
-   * @param {...T[]} items - The initial items to add to the ArrayList.
+   * @param items The initial items to add to the ArrayList.
    */
   constructor(...items: T[]) {
     const minCapacity = Math.ceil(items.length / ArrayList.GROWTH_THRESHOLD);

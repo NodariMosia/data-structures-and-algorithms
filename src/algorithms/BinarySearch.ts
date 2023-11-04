@@ -31,6 +31,8 @@ function recursiveBinarySearch(array: number[], target: number, startIndex: numb
 
 /**
  * Performs a binary search on a sorted array to find the index of the target element.
+ * @see https://en.wikipedia.org/wiki/Binary_search_algorithm
+ *
  * @param sortedArray The sorted array to search.
  * @param target The target element to find.
  * @returns The index of the target element in the sorted array, or -1 if it is not found.

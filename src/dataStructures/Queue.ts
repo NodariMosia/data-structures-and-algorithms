@@ -9,6 +9,15 @@ interface Node<T> {
   next: Node<T> | null;
 }
 
+/**
+ * A queue is a data structure that follows the First-In-First-Out (FIFO) principle.
+ * This means that the first element inserted into the queue is the first one to be removed.
+ * A queue supports adding (enqueue) elements to the end of the queue and removing (dequeue) from the front.
+ * This implementation uses a singly linked list to store the elements.
+ * @see https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
+ *
+ * @template T The type of elements held in this queue.
+ */
 export default class Queue<T> implements IQueue<T> {
   /**
    * The first node in the queue, or null if the queue is empty.
@@ -33,7 +42,7 @@ export default class Queue<T> implements IQueue<T> {
    * Creates a new Queue instance.
    * @constructor
    * @template T The type of elements held in this queue.
-   * @param {...T[]} items - The initial items to insert into the queue.
+   * @param items The initial items to insert into the queue.
    */
   constructor(...items: T[]) {
     this._length = 0;

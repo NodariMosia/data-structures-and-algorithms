@@ -1,11 +1,15 @@
+/**
+ * An interface representing a collection of elements that can be enumerated.
+ * @template T The type of elements in the collection.
+ */
 export interface Enumerable<T> {
   /**
-   * @description The number of elements in the collection.
+   * The number of elements in the collection.
    */
   readonly length: number;
 
   /**
-   * @description Removes all elements from the collection.
+   * Removes all elements from the collection.
    */
   clear: () => void;
 
