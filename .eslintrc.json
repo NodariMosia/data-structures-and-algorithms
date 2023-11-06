@@ -16,21 +16,6 @@
     "@typescript-eslint/naming-convention": [
       "error",
       {
-        "filter": "x-api-key",
-        "format": null,
-        "selector": "property"
-      },
-      {
-        "filter": "x-session-id",
-        "format": null,
-        "selector": "property"
-      },
-      {
-        "filter": "x-locale",
-        "format": null,
-        "selector": "property"
-      },
-      {
         "custom": {
           "match": false,
           "regex": "^(err)$"
